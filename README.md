@@ -3,6 +3,10 @@
 
 Olivia: 4th Year CS Major with People & Intelligence Threads
 Elijah: 4th Year CS Major with People & Intelligence Threads
+Daniel: 4th Year CS Major with People & Intelligence Threads
+Liz:    3rd Year CS Major with Device & Intelligence Threads
+Eric:   2nd Year CS Major with Media & Intelligence Threads
+
 
 ## Project Proposal
 
