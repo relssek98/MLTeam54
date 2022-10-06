@@ -21,7 +21,7 @@ The  pre-existing research which uses Naive Bayes to classify suicide ideation m
 During the text pre-processing stage, the reddit post data will be tokenized, stemmed and filtered for stop words. 
 To classify a post to be suicidal or non-suicidal, the multinomial Naive Bayes classifer from the scikit-learn package (MultinomialNB) will be used. Log prior, and log likelihood will be used to ensure greater computing efficiency and laplace smoothing will also be implemented to reduce the weight of words that appear zero times conditionally.
 After creating a Naive Bayes model based on the labeled data, the model will be applied to other subreddits that are similar to the source of the data through transfer learning. The posterior probability will be optimized for the new unlabeled data sets through the Expectation-Maximization algorithm.
-
+![alt text](MLTeam54/Naive Bayes Equation Visual.png)
 ### Potential Results & Discussion
 In order to determine the success of our project, our primary metric is percent accuracy in predicting if posts contain suicidal content. One recent study examining the accuracy of different sentiment analysis classifiers reported a 85.48% accuracy for the Naive Bayes approach, which is our starting point (Samal et al., 2017). Therefore, we will consider accuracy above 80% to be a reliable final result. This may shift if we decide to implement a different approach. Accuracy is the most important metric for us to collect because both false positives and false negatives could have drastic effects for the health and safety of those involved in the posts.
 
