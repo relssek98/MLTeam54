@@ -1,7 +1,7 @@
 
 ## Meet the Team
 
-Olivia: 4th Year CS Major with People & Intelligence Threads
+Olivia: 4th Year CS Major with People & Intelligence Threads <br>
 Elijah: 4th Year CS Major with People & Intelligence Threads
 Daniel: 4th Year CS Major with People & Intelligence Threads
 Liz:    3rd Year CS Major with Device & Intelligence Threads
