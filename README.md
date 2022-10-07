@@ -41,8 +41,9 @@ Tadesse, M. M., Lin, H., Xu, B., & Yang, L. (2019). Detection of Suicide Ideatio
 
 
 ### Contribution Chart
+
 | Name | Contributions |
-|:-----:|:--------------:|
+|:-----|:--------------|
 | Elijah Kessler | Wrote the introduction, literature review, and assisted with the problem definition. Created the GitHub page and added everyone's contributions to it |
 | Olivia Mauger | Helped with creating GitHub page and styled it using Markdown, recorded video and uploaded to YouTube, wrote Potential Results & Discussion section with Liz    |
 | Daniel Ling |Researched Naive Bayes and pre-processing for sentiment analysis, Met TA to check on project idea, Researched Naives Bayes Transfer Learning, Wrote the Methods Section, wrote problem statment with Eli|
