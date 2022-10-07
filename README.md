@@ -40,5 +40,12 @@ Tadesse, M. M., Lin, H., Xu, B., & Yang, L. (2019). Detection of Suicide Ideatio
  https://doi.org/10.3390/a13010007
 
 
-
+### Contribution Chart
+| Name | Contributions |
+|:-----|--------------:|
+| Elijah Kessler | Wrote the introduction, literature review, and assisted with the problem definition. Created the GitHub page and added everyone's contributions to it |
+| Olivia Mauger |     |
+| Daniel Ling |       |
+| Liz Huller |        |
+| Eric Zhang |        |
 
