@@ -8,6 +8,7 @@ Liz:    3rd Year CS Major with Device & Intelligence Threads <br>
 Eric:   2nd Year CS Major with Media & Intelligence Threads <br>
 
 ## Project Proposal Video: https://youtu.be/r-2KxHIcPFs
+### Gantt Chart Drive Link: https://docs.google.com/spreadsheets/d/1wRbEzjqjg5izmsQLVldgokHcVH765NBH/edit?usp=sharing&ouid=106124061592007882318&rtpof=true&sd=true
 ## Project Proposal
 
 ### Introduction & Background
