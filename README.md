@@ -1,11 +1,11 @@
 
 ## Meet the Team
 
-Olivia: 4th Year CS Major with People & Intelligence Threads <br>
-Elijah: 4th Year CS Major with People & Intelligence Threads <br>
-Daniel: 4th Year CS Major with People & Intelligence Threads <br>
+Liv: 4th Year CS Major with People & Intelligence Threads <br>
+Eli: 4th Year CS Major with People & Intelligence Threads <br>
+Dan: 4th Year CS Major with People & Intelligence Threads <br>
 Liz:    3rd Year CS Major with Device & Intelligence Threads <br>
-Eric:   2nd Year CS Major with Media & Intelligence Threads <br>
+Ric:   2nd Year CS Major with Media & Intelligence Threads <br>
 
 ## Project Proposal Video: https://youtu.be/r-2KxHIcPFs
 ### Gantt Chart Drive Link: https://docs.google.com/spreadsheets/d/1wRbEzjqjg5izmsQLVldgokHcVH765NBH/edit?usp=sharing&ouid=106124061592007882318&rtpof=true&sd=true
