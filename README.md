@@ -22,11 +22,11 @@ Some existing research has delved into the use of Naive Bayes Machine Learning a
 
 The pre-existing research which uses Naive Bayes to classify suicide ideation makes it clear that while it can be successful in certain respects, there are still areas to be optimized such as increasing the range of application of detection models. Since increasing the quality and quantity of labeled data sets is resource intensive, it is much more effective to focus on applying transfer learning techniques to increase the flexibility of detecting suicidal posts.
 
-**Data Collection
+**Data Collection**
 
 The dataset we utilized for our project utilized approximately 350,000 Reddit posts on the “Suicide Watch” and “depression” subreddits. All posts made to “Suicide Watch” from its creation on December 16, 2008 until January 2, 2021 were collected, while the posts collected which were made to “depression” came from January 1, 2009 until January 2, 2021. These posts were collected using Pushshift API.
 
-**Methods
+**Methods**
 
 During the text pre-processing stage, the reddit post data will be tokenized, stemmed and filtered for stop words. Specifically, we included the following pre-processing methods before conducting any further analysis: Remove Punctuation, Convert Contractions/Abbreviations/Acronyms into Words, Remove Emojis and URLs, Tokenization, Stemming, Stop Words (removal), and Lowercase Text (convert to). 
 
@@ -34,7 +34,7 @@ The stemming method combines like terms together, which is a form of dimension r
 
 To classify a post to be suicidal or non-suicidal, the multinomial Naive Bayes classifier from the scikit-learn package (MultinomialNB) will be used. Log prior, and log likelihood will be used to ensure greater computing efficiency and laplace smoothing will also be implemented to reduce the weight of words that appear zero times conditionally. After creating a Naive Bayes model based on the labeled data, the model will be applied to other subreddits that are similar to the source of the data through transfer learning. The posterior probability will be optimized for the new unlabeled data sets through the Expectation-Maximization algorithm. 
 
-*Implementation of Naive Bayes and TD-IDF
+*Implementation of Naive Bayes and TD-IDF*
 
 Once the data from reddit was preprocessed and tokenized, the data frame was split into suicidal and non-suicidal comments using the provided labels. A frequency table was generated for each to assist in calculating the Naive Bayes probability; however after examining a few of the frequent words within each frequency table, some words like “much” and “because” appear extremely frequently. If the Naive Bayes were to be run over the data, those words would be given too much weight due to its frequent nature and lackluster correlation with the labels. Thus the term frequency–inverse document frequency (TD-IDF) was used instead of the actual frequency of the terms. 
 
