@@ -62,8 +62,20 @@ Although there is a possibility of losing significant words due to the spacing e
 
 Because Naive Bayes is a relatively simple approach, we are going to utilize a few different methods to optimize it. One potential way of optimizing the approach is to remove the correlated features. In naive bayes, the highly correlated features are counted twice. This double counting leads to overestimating the importance of those features. Another way of optimizing naive bayes is to eliminate the zero observations problem. If the model comes across a feature that wasn’t in the training set, it gets a probability of 0 which ends up turning other values into 0 when multiplying. Finally, we will use log probabilities to avoid working with very small numbers that are difficult to store precisely.  These three optimizations should help improve the accuracy of the model.
 
+**Bibliography**
 
-### Udpated Contribution Chart
+Kumar, A., Trueman, T. E., & Abinesh, A. K. (2021). Suicidal risk identification in social media. Procedia Computer Science, 189, 368–373. https://doi.org/10.1016/j.procs.2021.05.106
+
+Ruiz, V., Shi, L., Quan, W., Ryan, N., Biernesser, C., Brent, D., & Tsui, R. (2019). Predicting Suicide Risk Level from Reddit Posts on Multiple Forums. Proceedings of the Sixth Workshop on Computational Linguistics and Clinical Psychology. https://doi.org/10.18653/v1/w19-3020
+
+Samal, B., Behera, A. K., & Panda, M. (2017). Performance analysis of supervised machine learning techniques for sentiment analysis. 2017 Third International Conference on Sensing, Signal Processing and Security (ICSSS). https://doi.org/10.1109/ssps.2017.8071579
+
+Tadesse, M. M., Lin, H., Xu, B., & Yang, L. (2019). Detection of Suicide Ideation in Social Media Forums Using Deep Learning. Algorithms, 13(1), 7. https://doi.org/10.3390/a13010007
+
+
+
+
+### Updated Contribution Chart
 
 | Name | Contributions |
 |:-----|:--------------|
