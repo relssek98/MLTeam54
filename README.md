@@ -41,7 +41,7 @@ Tadesse, M. M., Lin, H., Xu, B., & Yang, L. (2019). Detection of Suicide Ideatio
  https://doi.org/10.3390/a13010007
 
 
-### Contribution Chart
+### Udpated Contribution Chart
 
 | Name | Contributions |
 |:-----|:--------------|
