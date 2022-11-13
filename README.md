@@ -28,6 +28,9 @@ The dataset we utilized for our project utilized approximately 350,000 Reddit po
 
 **Methods**
 
+
+*Pre-Processing* 
+
 During the text pre-processing stage, the reddit post data will be tokenized, stemmed and filtered for stop words. Specifically, we included the following pre-processing methods before conducting any further analysis: Remove Punctuation, Convert Contractions/Abbreviations/Acronyms into Words, Remove Emojis and URLs, Tokenization, Stemming, Stop Words (removal), and Lowercase Text (convert to). 
 
 The stemming method combines like terms together, which is a form of dimension reduction. For example, words such as “running” and “run” have similar meanings, but just in different forms. Stemming would group these words together into the same token. By reducing the variety of words that have the similar meaning, the quality of the data is significantly improved upon since the weight of the tokens will become more representative of the meaning of the words rather than just raw word frequency. 
@@ -55,7 +58,7 @@ There are several flaws with this dataset which limit the efficacy of our model.
 Although there is a possibility of losing significant words due to the spacing error from the data set, the overall impact is minimal because the merged word is unlikely to repeat multiple times in other comments. The other issues with the data should only serve as noise and not have a significant impact on accuracy.
 
 
-**Ways to Optimize Naive Bayes**
+*Ways to Optimize Naive Bayes*
 
 Because Naive Bayes is a relatively simple approach, we are going to utilize a few different methods to optimize it. One potential way of optimizing the approach is to remove the correlated features. In naive bayes, the highly correlated features are counted twice. This double counting leads to overestimating the importance of those features. Another way of optimizing naive bayes is to eliminate the zero observations problem. If the model comes across a feature that wasn’t in the training set, it gets a probability of 0 which ends up turning other values into 0 when multiplying. Finally, we will use log probabilities to avoid working with very small numbers that are difficult to store precisely.  These three optimizations should help improve the accuracy of the model.
 
