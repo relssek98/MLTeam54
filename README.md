@@ -49,5 +49,5 @@ Tadesse, M. M., Lin, H., Xu, B., & Yang, L. (2019). Detection of Suicide Ideatio
 | Olivia Mauger | For the midterm: Completed and coded 3 pre-processing tasks (Remove Emojis, URLs, and to Lowercase), edited and helped with discussion on pre-processing errors & For the proposal: Helped with creating GitHub page and styled it using Markdown, recorded video and uploaded to YouTube, wrote Potential Results & Discussion section with Liz    |
 | Daniel Ling |Researched Naive Bayes and pre-processing for sentiment analysis, Met TA to check on project idea, Researched Naives Bayes Transfer Learning, Wrote the Methods Section, wrote problem statment with Eli|
 | Liz Huller | Researched Naive Bayes and other methods for sentiment analysis, worked with Olivia on Potential Results & Discussion section, helped plan video, and added dates/assigned names to the Gantt Chart |
-| Eric Zhang | Found the labeled data set for suicidal reddit posts. Researched the Naive Bayes Model and contributed to the methods section. Created visuals for the video presentation.      |
+| Eric Zhang (no longer in class) | Found the labeled data set for suicidal reddit posts. Researched the Naive Bayes Model and contributed to the methods section. Created visuals for the video presentation.      |
 
