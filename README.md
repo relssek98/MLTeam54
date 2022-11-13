@@ -12,13 +12,13 @@ Ric:   2nd Year CS Major with Media & Intelligence Threads <br>
 ## Project Proposal
 
 
-**Introduction & Background
+**Introduction & Background**
 
 Our team will be utilizing machine learning for the purpose of sentiment analysis on social media posts. Specifically, we will be using a database of over 300,000 reddit posts, which have been labeled for suicidal content, in order to train a machine learning model to recognize suicidal social media posts. Our dataset can be found on Kaggle here: https://www.kaggle.com/datasets/nikhileswarkomati/suicide-watch 
 
 Some existing research has delved into the use of Naive Bayes Machine Learning algorithm for sentiment analysis on Reddit posts to analyze them for suicidal content. One study found that the Naive Bayes model performed better than an SVM model and an ensemble model at binary-classification tasks such as distinguishing between posts flagged as either risk of suicide or no risk of suicide (Ruiz et al., 2019). Another found that the Naive Bayes model was outperformed by a Support Vector Machine model, a Random Forests model, and a Long Short Term Memory Convolutional Neural Network when classifying suicidal Reddit posts (Tadessee al., 2019). A third study found that Naive Bayes had the best Macro F1 score (a type of accuracy measurement) out of 11 different Machine Learning algorithms when performing this task (Kumar et al., 2021).
 
-**Problem Definition
+**Problem Definition**
 
 The pre-existing research which uses Naive Bayes to classify suicide ideation makes it clear that while it can be successful in certain respects, there are still areas to be optimized such as increasing the range of application of detection models. Since increasing the quality and quantity of labeled data sets is resource intensive, it is much more effective to focus on applying transfer learning techniques to increase the flexibility of detecting suicidal posts.
 
@@ -44,18 +44,18 @@ Once the data from reddit was preprocessed and tokenized, the data frame was spl
 By multiplying the term frequency with the inverse document frequency, if the term ( occurs frequently within the given document (d) and there is low document frequency in the overall dataset the TF-IDF weight will be high. This helps give more weight to words that have a significant impact on the document’s classification but does not appear as frequently. 
 After the TF IDF score was calculated, the data was split into 80% training data and 20% testing data. The training data was used to train the Naive Bayes classifier and the classifier was then run on the testing data and compared to the ground truth labels. 
 
-**Results & Discussion
+**Results & Discussion**
 
 In order to determine the success of our project, our primary metric is percent accuracy in predicting if posts contain suicidal content. One recent study examining the accuracy of different sentiment analysis classifiers reported a 85.48% accuracy for the Naive Bayes approach, which is our starting point (Samal et al., 2017). Accuracy is the most important metric for us to collect because both false positives and false negatives could have drastic effects for the health and safety of those involved in the posts. Our approach was able to achieve 88% accuracy, which was measured by comparing the predicted labels to the ground truth labels from the testing dataset. However, there are still many more areas that we could increase the accuracy of the Naive Bayes method, such as trying alternative preprocessing methods, and different frequency weightings 
 
-*Flaws in Dataset and Preprocessing
+*Flaws in Dataset and Preprocessing*
 
 There are several flaws with this dataset which limit the efficacy of our model. Due to the nature of social media posts, this dataset is rife with the use of slang, emojis, URLs, acronyms, gibberish, and other confounding factors which makes the data difficult to process. While we were able to account for many of these aspects with our data preprocessing, we were likely unable to entirely account for all these issues, meaning our cleaned data which the model was trained with may have still been somewhat flawed and thus could have yielded inaccuracies. Furthermore, there were certain flaws with the collection of data which resulted in some potentially meaningful words being effectively lost. We believe that when collecting data, the creators of the dataset did not put spaces between the last word of a post’s title and the first word of the post’s content, resulting in words being fused in several posts. Therefore, we may be losing some highly significant words, like “suicidal,” because a post’s title ended with the word and had more text within the body of the Reddit post. In most of these cases our data preprocessing is likely recognizing these fused words as gibberish and removing them, which means we could be losing significant data. 
 
 Although there is a possibility of losing significant words due to the spacing error from the data set, the overall impact is minimal because the merged word is unlikely to repeat multiple times in other comments. The other issues with the data should only serve as noise and not have a significant impact on accuracy.
 
 
-**Ways to Optimize Naive Bayes
+**Ways to Optimize Naive Bayes**
 
 Because Naive Bayes is a relatively simple approach, we are going to utilize a few different methods to optimize it. One potential way of optimizing the approach is to remove the correlated features. In naive bayes, the highly correlated features are counted twice. This double counting leads to overestimating the importance of those features. Another way of optimizing naive bayes is to eliminate the zero observations problem. If the model comes across a feature that wasn’t in the training set, it gets a probability of 0 which ends up turning other values into 0 when multiplying. Finally, we will use log probabilities to avoid working with very small numbers that are difficult to store precisely.  These three optimizations should help improve the accuracy of the model.
 
