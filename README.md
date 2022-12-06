@@ -40,6 +40,7 @@ During the text pre-processing stage, the reddit post data was tokenized, stemme
 The stemming method combines like terms together, which is a form of dimension reduction. For example, words such as “running” and “run” have similar meanings, but just in different forms. Stemming would group these words together into the same token. By reducing the variety of words that have the similar meaning, the quality of the data is significantly improved upon since the weight of the tokens will become more representative of the meaning of the words rather than just raw word frequency. See the figures and captions below for evidence of our data pre-processing. 
 
 ![](figure1.1.png)
+*Figure 1.1 No Contractions, No Punctuation, No Emojis/URLS, Tokenization*
 
 ![](figure&#32;1.2.png)
 
@@ -116,10 +117,11 @@ As seen below, when the num_estimators was 10 for the Random Forest Model (with 
 ![](random&#32;forest&#32;accuracy.png)
 
 We tuned this hyper-parameter to have  num_estimators to equal 50 and the accuracy improved almost 3% to be 89% accurate overall. We were not surprised by this increase in accuracy because increasing the number of trees in the forest gives the model more classifiers to use in the prediction. The risk with increasing the number of trees is potentially overfitting and greater computational cost. We tried to strike a balance. 
-![]((random&#32;forest&#32;updated&#32;accuracy.png)
+![](random&#32;forest&#32;updated&#32;accuracy.png)
 
 ![](table&#32;3.png)
 ![](chart&#32;3.png)
+
 1. The highest accuracy was achieved by TF-IDF Bigram Logistic Regression at 93.34%, followed by Bag of Words Bigram Logistic Regression at 93.32%, followed by Bag of Words Monogram Logistic Regression at 92.82%
 2. The lowest accuracy was achieved by Bag of Words Multinomial Naive Bayes at 84.24% accuracy.
 3. Accuracies ranged from ~84% to ~93% across all models tested
@@ -137,16 +139,27 @@ In general, Logistic Regression appears to be less sensitive to changes in the p
 **Coding References**
 
 *Pre-Preprocessing:* 
-https://towardsdatascience.com/how-to-preprocess-social-media-data-and-text-messages-b011efacf74 
+
+https://towardsdatascience.com/how-to-preprocess-social-media-data-and-text-messages-b011efacf74
+
 https://www.researchgate.net/publication/336824895_Effective_Text_Data_Preprocessing_Technique_for_Sentiment_Analysis_in_Social_Media_Data
+
 https://www.analyticsvidhya.com/blog/2021/06/text-preprocessing-in-nlp-with-python-codes/ 
+
 https://www.geeksforgeeks.org/nlp-expand-contractions-in-text-processing/
+
 https://medium.com/coinmonks/remaking-of-shortened-sms-tweet-post-slangs-and-word-contraction-into-sentences-nlp-7bd1bbc6fcff
+
 https://realpython.com/sentiment-analysis-python/
+
 https://www.geeksforgeeks.org/text-preprocessing-in-python-set-1/ 
+
 https://medium.com/@tusharsri/nlp-a-quick-guide-to-stemming-60f1ca5db49e
+
 https://www.educative.io/answers/how-to-remove-emoji-from-the-text-in-python
+
 https://medium.com/analytics-vidhya/text-processing-tools-i-wish-i-knew-earlier-a6960e16a9c9
+
 https://bobbyhadz.com/blog/python-remove-url-from-text#:~:text=sub()%20method%20to%20remove,replacing%20them%20with%20empty%20strings. 
 
 *Naive Bayes:* 
