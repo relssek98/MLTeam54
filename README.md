@@ -39,7 +39,7 @@ During the text pre-processing stage, the reddit post data was tokenized, stemme
 
 The stemming method combines like terms together, which is a form of dimension reduction. For example, words such as “running” and “run” have similar meanings, but just in different forms. Stemming would group these words together into the same token. By reducing the variety of words that have the similar meaning, the quality of the data is significantly improved upon since the weight of the tokens will become more representative of the meaning of the words rather than just raw word frequency. See the figures and captions below for evidence of our data pre-processing. 
 
-![](figure&#32:1.1.png)
+![](figure&#32;1.1.png)
 
 ![](figure 1.2.png)
 
