@@ -74,6 +74,7 @@ There are a few interesting points to note here about the most frequent tokens:
 
 To classify a post to be suicidal or non-suicidal, the multinomial Naive Bayes classifier from the scikit-learn package (MultinomialNB) was used. Log prior, and log likelihood are used to ensure greater computing efficiency and laplace smoothing will also be implemented to reduce the weight of words that appear zero times conditionally. After creating a Naive Bayes model based on the labeled data, the model will be applied to other subreddits that are similar to the source of the data through transfer learning.
 
+![](intro.png)
 
 Once the data from reddit was preprocessed and tokenized, the data frame was split into suicidal and non-suicidal comments using the provided labels. A frequency table (see Figures 3.1 and 3.2 above) was generated for each to assist in calculating the Naive Bayes probability; however after examining a few of the frequent words within each frequency table, some words like “much” and “because” appear extremely frequently. If the Naive Bayes were to be run over the data, those words would be given too much weight due to its frequent nature and lackluster correlation with the labels. Thus the term frequency–inverse document frequency (TD-IDF) was used instead of the actual frequency of the terms. 
 
