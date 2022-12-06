@@ -100,7 +100,7 @@ Our Naive Bayes approach using TF-IDF was able to achieve 88% accuracy, which wa
 
 Takeaways:
 
-1. Logistic Regression outperforms Naive Bayes for all metrics excluding true positive rate. 
+1. Across both bigrams and monograms, Logistic Regression outperforms Naive Bayes for all metrics excluding true positive rate. 
 2. TFIDF does not have a significant difference on the performance of Logistic Regression, but makes an improvement (albeit still small) on the accuracy of the Naive Bayes model for all cases except the true positive rate.
 3. These takeaways are for both monogram and bigrams - we breakdown the monogram vs bigram differences below. 
 
