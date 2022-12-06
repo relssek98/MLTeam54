@@ -96,7 +96,9 @@ Our Naive Bayes approach using TF-IDF was able to achieve 88% accuracy, which wa
 
 ![](table&#32;1.png)
 ![](table&#32;2.png)
+
 **Takeaways:**
+
 1. Logistic Regression outperforms Naive Bayes for all metrics excluding true positive rate. 
 2. TFIDF does not have a significant difference on the performance of Logistic Regression, but makes an improvement (albeit still small) on the accuracy of the Naive Bayes model for all cases except the true positive rate.
 
@@ -148,6 +150,7 @@ https://medium.com/analytics-vidhya/text-processing-tools-i-wish-i-knew-earlier-
 https://bobbyhadz.com/blog/python-remove-url-from-text#:~:text=sub()%20method%20to%20remove,replacing%20them%20with%20empty%20strings. 
 
 *Naive Bayes:* 
+
 Documentation:(https://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.MultinomialNB.html#sklearn.naive_bayes.MultinomialNB)
 
 *Logistic Regression:*
@@ -156,6 +159,7 @@ Documentation:(https://scikit-learn.org/stable/modules/generated/sklearn.linear_
 Example: (https://medium.com/analytics-vidhya/applying-text-classification-using-logistic-regression-a-comparison-between-bow-and-tf-idf-1f1ed1b83640)
 
 *Random Forest:* 
+
 Documentation (https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html) 
 Example (https://www.datacamp.com/tutorial/random-forests-classifier-python) 
 
