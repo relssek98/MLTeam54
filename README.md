@@ -121,6 +121,8 @@ As seen below, when the num_estimators was 10 for the Random Forest Model (with 
 
 We tuned this hyper-parameter to have  num_estimators to equal 50 and the accuracy improved almost 3% to be 89% accurate overall. We were not surprised by this increase in accuracy because increasing the number of trees in the forest gives the model more classifiers to use in the prediction. The risk with increasing the number of trees is potentially overfitting and greater computational cost. We tried to strike a balance. 
 
+*These final charts and takeaways below present just the accuracy rates for all variations of the models used and attempt to summarize the results section.* 
+
 ![](random&#32;forest&#32;updated&#32;accuracy.png)
 
 ![](table&#32;3.png)
@@ -136,7 +138,7 @@ Takeaways:
 
 **In respect to all metrics excluding true positive rate, the Logistic Regression model outperformed the Naive Bayes model. The Random Forest Bag of Words implementation performed slightly better in overall accuracy than Naive Bayes and worse than Logistic Regression for all implementations.**
 
- Furthermore, TF-IDF did not have a significant impact on the Logistic Regression model’s performance when compared to its performance using Bag of Words, while Naive Bayes performed better on all metrics except for true positive rate when the TF-IDF approach was utilized. Naive Bayes is overestimating positive results, as evidenced by the high true positive rate, low true negative rate, and relatively low f1 score. Future research could look into how to reduce this overestimating positive results in Naive Bayes for these posts, perhaps taking place in the pre-processing step. 
+ Furthermore, TF-IDF did not have a significant impact on the Logistic Regression model’s performance when compared to its performance using Bag of Words, while Naive Bayes performed better on all metrics except for true positive rate when the TF-IDF approach was utilized (for both monogram and bigram). Naive Bayes is overestimating positive results, as evidenced by the high true positive rate, low true negative rate, and relatively low f1 score. Future research could look into how to reduce this overestimating positive results in Naive Bayes for these posts, perhaps taking place in the pre-processing step. 
 
 This trend is similar for our analysis of monograms vs bigram tokens in our dataset. There is not significantly higher accuracy for using bigrams vs monograms for Logistic Regression, but using  monograms for Naive Bayes (with either TFIDF or Bag of Words) produces a slightly higher accuracy. 
 
