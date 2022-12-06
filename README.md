@@ -16,7 +16,7 @@ Former Member Ric:   2nd Year CS Major with Media & Intelligence Threads <br>
 
 **Introduction & Background**
 
-Our team utilized machine learning for the purpose of sentiment analysis on social media posts. Specifically, we will be using a database of over 300,000 reddit posts, which have been labeled for suicidal content, in order to train a machine learning model to recognize suicidal social media posts. Our dataset can be found on Kaggle here: https://www.kaggle.com/datasets/nikhileswarkomati/suicide-watch 
+Our team utilized machine learning for the purpose of sentiment analysis on social media posts. Specifically, we used a database of over 300,000 reddit posts, which have been labeled for suicidal content, in order to train a machine learning model to recognize suicidal social media posts. Our dataset can be found on Kaggle here: https://www.kaggle.com/datasets/nikhileswarkomati/suicide-watch 
 
 Some existing research has delved into the use of Naive Bayes Machine Learning algorithm for sentiment analysis on Reddit posts to analyze them for suicidal content. One study found that the Naive Bayes model performed better than an SVM model and an ensemble model at binary-classification tasks such as distinguishing between posts flagged as either risk of suicide or no risk of suicide (Ruiz et al., 2019). Another found that the Naive Bayes model was outperformed by a Support Vector Machine model, a Random Forests model, and a Long Short Term Memory Convolutional Neural Network when classifying suicidal Reddit posts (Tadessee al., 2019). A third study found that Naive Bayes had the best Macro F1 score (a type of accuracy measurement) out of 11 different Machine Learning algorithms when performing this task (Kumar et al., 2021).
 
@@ -35,7 +35,7 @@ The dataset we utilized for our project utilized approximately 350,000 Reddit po
 
 *Pre-Processing* 
 
-During the text pre-processing stage, the reddit post data was tokenized, stemmed and filtered for stop words. Specifically, we included the following pre-processing methods before conducting any further analysis in the following order: Convert Contractions/Abbreviations/Acronyms into Words, Remove Punctuation, Remove Emojis and URLs, Tokenization, Stemming, Stop Words (removal), and Lowercase Text (convert to). Removing Contractions/Abbreviations/Acronyms also removes gibberish. 
+During the text pre-processing stage, the Reddit post data was tokenized, stemmed and filtered for stop words. Specifically, we included the following pre-processing methods before conducting any further analysis in the following order: Convert Contractions/Abbreviations/Acronyms into Words, Remove Punctuation, Remove Emojis and URLs, Tokenization, Stemming, Stop Words (removal), and Lowercase Text (convert to). Removing Contractions/Abbreviations/Acronyms also removes gibberish. All resources we referenced for pre-processing are linked at the bottom of the report. 
 
 The stemming method combines like terms together, which is a form of dimension reduction. For example, words such as “running” and “run” have similar meanings, but just in different forms. Stemming would group these words together into the same token. By reducing the variety of words that have the similar meaning, the quality of the data is significantly improved upon since the weight of the tokens will become more representative of the meaning of the words rather than just raw word frequency. See the figures and captions below for evidence of our data pre-processing. 
 
@@ -72,7 +72,7 @@ There are a few interesting points to note here about the most frequent tokens:
 
 *Implementation of  Logistic Regression, Naive Bayes, TF-IDF, and Random Forest*
 
-To classify a post to be suicidal or non-suicidal, the multinomial Naive Bayes classifier from the scikit-learn package (MultinomialNB) will be used. Log prior, and log likelihood will be used to ensure greater computing efficiency and laplace smoothing will also be implemented to reduce the weight of words that appear zero times conditionally. After creating a Naive Bayes model based on the labeled data, the model will be applied to other subreddits that are similar to the source of the data through transfer learning.
+To classify a post to be suicidal or non-suicidal, the multinomial Naive Bayes classifier from the scikit-learn package (MultinomialNB) was used. Log prior, and log likelihood are used to ensure greater computing efficiency and laplace smoothing will also be implemented to reduce the weight of words that appear zero times conditionally. After creating a Naive Bayes model based on the labeled data, the model will be applied to other subreddits that are similar to the source of the data through transfer learning.
 
 
 Once the data from reddit was preprocessed and tokenized, the data frame was split into suicidal and non-suicidal comments using the provided labels. A frequency table (see Figures 3.1 and 3.2 above) was generated for each to assist in calculating the Naive Bayes probability; however after examining a few of the frequent words within each frequency table, some words like “much” and “because” appear extremely frequently. If the Naive Bayes were to be run over the data, those words would be given too much weight due to its frequent nature and lackluster correlation with the labels. Thus the term frequency–inverse document frequency (TD-IDF) was used instead of the actual frequency of the terms. 
@@ -86,14 +86,14 @@ After the TF-IDF score was calculated, the data was split into 80% training data
 
 This same training data was also used to train the Logistic Regression model. Logistic Regression is a machine learning model which is also often used for binary classification tasks. It is a statistical model which uses a logistic function to model conditional probability. This model was run for 100 iterations on the training data before being run on the testing data and compared to the ground truth labels.
 
-This same training data was also used to train the Random Forest model. This type of model uses a collection of decision trees and random samples of the data to predict classification. We ran this model with the default parameters, except for num_estimators. We tuned this hyper-parameter to be equal to 10 and 50, and compared the two accuracies. 
+This same training data was also used to train the Random Forest model (using sklearn RandomForestClassifier). This type of model uses a collection of decision trees and subsequent random samples of the data to predict classification. We ran this model with the default parameters, except for num_estimators. We tuned this hyper-parameter to be equal to 10 and 50, and compared the two accuracies. 
 
 
 **Results & Discussion**
 
 In order to determine the success of our project, our primary metrics is percent accuracy in predicting if posts contain suicidal content. Accuracy is the most important metric for us to collect because both false positives and false negatives could have drastic effects for the health and safety of those involved in the posts. We broke down our analysis further into the true positive, true negative, false positive, and false negative percentages for each model, as well as the f1 score (below). 
 
-Our Naive Bayes approach using TF-IDF was able to achieve 88% accuracy, which was measured by comparing the predicted labels to the ground truth labels from the testing dataset (which as previously indicated, had a 50-50 split in suicidal and non-suicidal posts). We also analyzed the true positive rates, true negative rates, positive precision, and f1 scores of the Naive Bayes model, as well as the Logistic Regression model, using both the bag of words and TF-IDF approaches to prepare the training data for these models. The results are shown in the tables and charts below:
+Our Naive Bayes approach using TF-IDF was able to achieve 88% accuracy, which was measured by comparing the predicted labels to the ground truth labels from the testing dataset (which as previously indicated, had an about 50-50 split in suicidal and non-suicidal posts). We also analyzed the true positive rates, true negative rates, positive precision, and f1 scores of the Naive Bayes model, as well as the Logistic Regression model, using both the bag of words and TF-IDF approaches to prepare the training data for these models. The results are shown in the tables and charts below:
 
 ![](table&#32;1.png)
 ![](table&#32;2.png)
@@ -102,6 +102,7 @@ Takeaways:
 
 1. Logistic Regression outperforms Naive Bayes for all metrics excluding true positive rate. 
 2. TFIDF does not have a significant difference on the performance of Logistic Regression, but makes an improvement (albeit still small) on the accuracy of the Naive Bayes model for all cases except the true positive rate.
+3. These takeaways are for both monogram and bigrams - we breakdown the monogram vs bigram differences below. 
 
 ![](chart&#32;1.png)
 ![](chart&#32;2.png)
