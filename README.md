@@ -119,6 +119,7 @@ As seen below, when the num_estimators was 10 for the Random Forest Model (with 
 ![](random&#32;forest&#32;accuracy.png)
 
 We tuned this hyper-parameter to have  num_estimators to equal 50 and the accuracy improved almost 3% to be 89% accurate overall. We were not surprised by this increase in accuracy because increasing the number of trees in the forest gives the model more classifiers to use in the prediction. The risk with increasing the number of trees is potentially overfitting and greater computational cost. We tried to strike a balance. 
+
 ![](random&#32;forest&#32;updated&#32;accuracy.png)
 
 ![](table&#32;3.png)
