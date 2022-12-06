@@ -98,13 +98,15 @@ Our Naive Bayes approach using TF-IDF was able to achieve 88% accuracy, which wa
 ![](table&#32;1.png)
 ![](table&#32;2.png)
 
-**Takeaways:**
+Takeaways:
 
 1. Logistic Regression outperforms Naive Bayes for all metrics excluding true positive rate. 
 2. TFIDF does not have a significant difference on the performance of Logistic Regression, but makes an improvement (albeit still small) on the accuracy of the Naive Bayes model for all cases except the true positive rate.
 
 ![](chart&#32;1.png)
 ![](chart&#32;2.png)
+
+Takeaways: 
 
 1. We ran our models using both bigrams (two word tokens) and monograms (one word tokens). When comparing Charts 1 and 2, there is **not a significant change in accuracy for logistic regression for monograms vs bigrams.** 
 2. For **Naive Bayes, monograms performed slightly higher in accuracy** than the dataset with bigrams. This applies to both the Bag of Words and TFIDF implementations. 
@@ -121,6 +123,8 @@ We tuned this hyper-parameter to have  num_estimators to equal 50 and the accura
 
 ![](table&#32;3.png)
 ![](chart&#32;3.png)
+
+Takeaways:
 
 1. The highest accuracy was achieved by TF-IDF Bigram Logistic Regression at 93.34%, followed by Bag of Words Bigram Logistic Regression at 93.32%, followed by Bag of Words Monogram Logistic Regression at 92.82%
 2. The lowest accuracy was achieved by Bag of Words Multinomial Naive Bayes at 84.24% accuracy.
