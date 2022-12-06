@@ -41,7 +41,7 @@ The stemming method combines like terms together, which is a form of dimension r
 
 ![](figure1.1.png)
 
-![](figure 1.2.png)
+![](figure&#32;1.2.png)
 
 The images above demonstrate what our data looked like before and after preprocessing. The column titled “raw” is the original data before any pre-processing. The last column is the most “clean version” of the data. Meaning, every following column to the right becomes more and more “clean” (e.g. the no_punctuation output also has no contractions). The highlights in Figure 1.1 and Figure 1.2 indicate specific examples of each of the preprocessing methods. 
 
@@ -51,7 +51,7 @@ There are several flaws with this dataset which limit the efficacy of our model.
 
 Furthermore, there were certain flaws with the collection of data which resulted in some potentially meaningful words being effectively lost. **We believe that when collecting data, the creators of the dataset did not put spaces between the last word of a post’s title and the first word of the post’s content, resulting in words being fused in several posts. Therefore, we may be losing some highly significant words, like “suicidal,” because a post’s title ended with the word and had more text within the body of the Reddit post.** In some of these cases our data preprocessing is likely recognizing these fused words as gibberish, but as shown below, this is not always the case.  See the Figure 2.1 for an example of the “gibberish” merged words in the cleaned dataset.  
 
-![](figure 2.1.png)
+![](figure&#32;2.1.png)
 
 Here, the title of the post is “Ex Wife Threatening Suicide”. However, no space is added between this title and the first word of the post, so the word “Suicide” becomes merged with “Recently” to become “SuicideRecently”. This word is still included in the cleaned dataset, which in this case especially, removes weight from the important word “suicide”. It was not recognized as gibberish and thus remained in the dataset. 
 
@@ -61,8 +61,8 @@ Although there is a possibility of losing significant words or including “gibb
 
 The Naive Bayes implementation for this project uses a frequency table of tokens for both Suicidal and Non-Suicidal posts. These are the tokens generated from the cleaned data described in the previous section. The figures below show the top 25 most frequent tokens for both kinds of posts. 
 
-![](figure 3.1.png)
-![](figure 3.2.png)
+![](figure&#32;3.1.png)
+![](figure&#32;3.2.png)
 
 There are a few interesting points to note here about the most frequent tokens: 
 
@@ -94,14 +94,14 @@ In order to determine the success of our project, our primary metrics is percent
 
 Our Naive Bayes approach using TF-IDF was able to achieve 88% accuracy, which was measured by comparing the predicted labels to the ground truth labels from the testing dataset (which as previously indicated, had a 50-50 split in suicidal and non-suicidal posts). We also analyzed the true positive rates, true negative rates, positive precision, and f1 scores of the Naive Bayes model, as well as the Logistic Regression model, using both the bag of words and TF-IDF approaches to prepare the training data for these models. The results are shown in the tables and charts below:
 
-![](table 1.png)
-![](table 2.png)
+![](table&#32;1.png)
+![](table&#32;2.png)
 **Takeaways:**
 1. Logistic Regression outperforms Naive Bayes for all metrics excluding true positive rate. 
 2. TFIDF does not have a significant difference on the performance of Logistic Regression, but makes an improvement (albeit still small) on the accuracy of the Naive Bayes model for all cases except the true positive rate.
 
-![](chart 1.png)
-![](chart 2.png)
+![](chart&#32;1.png)
+![](chart&#32;2.png)
 
 1. We ran our models using both bigrams (two word tokens) and monograms (one word tokens). When comparing Charts 1 and 2, there is **not a significant change in accuracy for logistic regression for monograms vs bigrams.** 
 2. For **Naive Bayes, monograms performed slightly higher in accuracy** than the dataset with bigrams. This applies to both the Bag of Words and TFIDF implementations. 
@@ -111,13 +111,13 @@ Our Naive Bayes approach using TF-IDF was able to achieve 88% accuracy, which wa
 
 As seen below, when the num_estimators was 10 for the Random Forest Model (with Bag of Words), the accuracy is 86%, which is the worst performance of any other models discussed previously in this report. 
 
-![](random forest accuracy.png)
+![](random&#32;forest&#32;accuracy.png)
 
 We tuned this hyper-parameter to have  num_estimators to equal 50 and the accuracy improved almost 3% to be 89% accurate overall. We were not surprised by this increase in accuracy because increasing the number of trees in the forest gives the model more classifiers to use in the prediction. The risk with increasing the number of trees is potentially overfitting and greater computational cost. We tried to strike a balance. 
-![]((random forest updated accuracy.png)
+![]((random&#32;forest&#32;updated&#32;accuracy.png)
 
-![](table 3.png)
-![](chart 3.png)
+![](table&#32;3.png)
+![](chart&#32;3.png)
 1. The highest accuracy was achieved by TF-IDF Bigram Logistic Regression at 93.34%, followed by Bag of Words Bigram Logistic Regression at 93.32%, followed by Bag of Words Monogram Logistic Regression at 92.82%
 2. The lowest accuracy was achieved by Bag of Words Multinomial Naive Bayes at 84.24% accuracy.
 3. Accuracies ranged from ~84% to ~93% across all models tested
@@ -178,8 +178,7 @@ Tadesse, M. M., Lin, H., Xu, B., & Yang, L. (2019). Detection of Suicide Ideatio
 |:-----|:--------------|
 | Elijah Kessler | For the final: Created data visualizations comparing performance of our models. Updated the problem definition, implementation, and results and discussion sections. Recorded the introduction, existing research, and problem definition sections of the video. For the midterm: Completed and coded 2 pre-processing tasks (Remove Punctuation, Remove Acronyms) and processed the dataset from original csv into Python dictionary for pre-processing. Wrote the "Flaws in Dataset" section of the midterm report. For the proposal: Wrote the introduction, literature review, and assisted with the problem definition. Created the GitHub page and added everyone's contributions to it. |
 | Olivia Mauger | For the Final Report: Coded Random Forest model and analysis, collecting preprocessing examples for report, exploring most frequent tokens chart and analysis, editing the discussion section, conclusions section for report and video. For the midterm: Completed and coded 3 pre-processing tasks (Remove Emojis, URLs, and to Lowercase), edited and helped with discussion on pre-processing errors & For the proposal: Helped with creating GitHub page and styled it using Markdown, recorded video and uploaded to YouTube, wrote Potential Results & Discussion section with Liz |
-| Daniel Ling |For the Final Report: Coded Logistic Regression Model, coded all accuracy statistics calculations (false positive, false negative, etc), coded monogram and bigram analysis for Logistic Regression and Naive Bayes, implementation section of report.  For the midterm: Coded Naive Bayes Method, Converted data into TD-IDF scores, Converted data into Frequency Table, wrote about the implementation of Naive Bayes and TD-IDF, and also wrote more details about stemming
-For the proposal: Researched Naive Bayes and pre-processing for sentiment analysis, Met TA to check on project idea, Researched Naives Bayes Transfer Learning, Wrote the Methods Section, wrote problem statement with Eli |
+| Daniel Ling |For the Final Report: Coded Logistic Regression Model, coded all accuracy statistics calculations (false positive, false negative, etc), coded monogram and bigram analysis for Logistic Regression and Naive Bayes, implementation section of report.  For the midterm: Coded Naive Bayes Method, Converted data into TD-IDF scores, Converted data into Frequency Table, wrote about the implementation of Naive Bayes and TD-IDF, and also wrote more details about stemming. For the proposal: Researched Naive Bayes and pre-processing for sentiment analysis, Met TA to check on project idea, Researched Naives Bayes Transfer Learning, Wrote the Methods Section, wrote problem statement with Eli |
 | Liz Huller | For the Final: Recorded the data collection and preprocessing sections of the video. Investigated the effects of the removal of stop words on the accuracy metrics.  For the midterm: Completed and coded 3 pre-processing tasks (Stemming, Stop words, tokenization). Wrote the ways of optimizing naive bayes section of the midterm report. For the proposal: Researched Naive Bayes and other methods for sentiment analysis, worked with Olivia on Potential Results & Discussion section, helped plan video, and added dates/assigned names to the Gantt Chart |
 | Eric Zhang (no longer in class) | Found the labeled data set for suicidal reddit posts. Researched the Naive Bayes Model and contributed to the methods section. Created visuals for the video presentation.  
 
