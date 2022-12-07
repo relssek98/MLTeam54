@@ -12,6 +12,7 @@ Former Member Ric:   2nd Year CS Major with Media & Intelligence Threads <br>
 ## Project Proposal Video: https://youtu.be/r-2KxHIcPFs
 ### Gantt Chart Drive Link: https://docs.google.com/spreadsheets/d/1wRbEzjqjg5izmsQLVldgokHcVH765NBH/edit?usp=sharing&ouid=106124061592007882318&rtpof=true&sd=true
 ## Project Proposal
+## Final Report Presentation Video: https://youtu.be/2g0yPqXu4N4
 
 
 **Introduction & Background**
