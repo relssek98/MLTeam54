@@ -3,11 +3,11 @@
 
 Liv: 4th Year CS Major with People & Intelligence Threads <br>
 Eli: 4th Year CS Major with People & Intelligence Threads <br>
-Dan: 4th Year CS Major with People & Intelligence Threads <br>
+Dan: 3rd Year CS Major with People & Intelligence Threads <br>
 Liz:    3rd Year CS Major with Device & Intelligence Threads <br>
 
 
-Former Member Ric:   2nd Year CS Major with Media & Intelligence Threads <br>
+Former Member Ric:   4th Year CS Major with Media & Intelligence Threads <br>
 
 ## Project Proposal Video: https://youtu.be/r-2KxHIcPFs
 ## Final Report Presentation Video: https://youtu.be/2g0yPqXu4N4
