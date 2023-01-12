@@ -1,10 +1,11 @@
 
+#Machine Learning Group Project Fall 2022: Testing and Optimizing Various Machine Learning Algorithims for Suicide Ideation Detection
 ## Meet the Team
 
 Liv: 4th Year CS Major with People & Intelligence Threads <br>
 Eli: 4th Year CS Major with People & Intelligence Threads <br>
 Dan: 3rd Year CS Major with People & Intelligence Threads <br>
-Liz:    3rd Year CS Major with Device & Intelligence Threads <br>
+Liz: 3rd Year CS Major with Device & Intelligence Threads <br>
 
 
 Former Member Ric:   4th Year CS Major with Media & Intelligence Threads <br>
@@ -215,5 +216,5 @@ Tadesse, M. M., Lin, H., Xu, B., & Yang, L. (2019). Detection of Suicide Ideatio
 | Olivia Mauger | For the Final Report: Coded Random Forest model and analysis, collecting preprocessing examples for report, exploring most frequent tokens chart and analysis, editing the discussion section, conclusions section for report and video. For the midterm: Completed and coded 3 pre-processing tasks (Remove Emojis, URLs, and to Lowercase), edited and helped with discussion on pre-processing errors & For the proposal: Helped with creating GitHub page and styled it using Markdown, recorded video and uploaded to YouTube, wrote Potential Results & Discussion section with Liz |
 | Daniel Ling |For the Final Report: Coded Logistic Regression Model, coded all accuracy statistics calculations (false positive, false negative, etc), coded monogram and bigram analysis for Logistic Regression and Naive Bayes, implementation section of report.  For the midterm: Coded Naive Bayes Method, Converted data into TD-IDF scores, Converted data into Frequency Table, wrote about the implementation of Naive Bayes and TD-IDF, and also wrote more details about stemming. For the proposal: Researched Naive Bayes and pre-processing for sentiment analysis, Met TA to check on project idea, Researched Naives Bayes Transfer Learning, Wrote the Methods Section, wrote problem statement with Eli |
 | Liz Huller | For the Final: Recorded the data collection and preprocessing sections of the video. Investigated the effects of the removal of stop words on the accuracy metrics.  For the midterm: Completed and coded 3 pre-processing tasks (Stemming, Stop words, tokenization). Wrote the ways of optimizing naive bayes section of the midterm report. For the proposal: Researched Naive Bayes and other methods for sentiment analysis, worked with Olivia on Potential Results & Discussion section, helped plan video, and added dates/assigned names to the Gantt Chart |
-| Eric Zhang (no longer in class) | Found the labeled data set for suicidal reddit posts. Researched the Naive Bayes Model and contributed to the methods section. Created visuals for the video presentation.  
+| Eric Zhang (Dropped Course on Oct 27, 2022) | Found the labeled data set for suicidal reddit posts. Researched the Naive Bayes Model and contributed to the methods section. Created visuals for the video presentation.  
 
