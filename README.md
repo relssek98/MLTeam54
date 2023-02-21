@@ -1,5 +1,5 @@
 
-# Machine Learning Group Project Fall 2022:  Testing and Optimizing Various Machine Learning Algorithims for Suicide Ideation Detection
+# Machine Learning Group Project Fall 2022:  Testing and Optimizing Various Machine Learning Algorithms for Suicide Ideation Detection
 ## Meet the Team
 
 Liv: 4th Year CS Major with People & Intelligence Threads <br>
